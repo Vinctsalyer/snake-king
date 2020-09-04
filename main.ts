@@ -1,3 +1,6 @@
+sprites.onOverlap(SpriteKind.Food, SpriteKind.Player, function (sprite, otherSprite) {
+    game.over(true, effects.hearts)
+})
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
     mySprite.startEffect(effects.fire, 1000)
     scene.cameraShake(4, 500)
@@ -84,3 +87,4 @@ let Pizza = sprites.create(img`
     `, SpriteKind.Food)
 Pizza.setFlag(SpriteFlag.StayInScreen, true)
 mySprite.setFlag(SpriteFlag.StayInScreen, true)
+Pizza.setPosition(142, 53)
